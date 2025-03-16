@@ -74,16 +74,16 @@ CREATE TABLE `game` (
   KEY `in_gameId` (`game_id`),
   KEY `in_gameNo` (`game_no`),
   KEY `in_dateOfSale` (`date_of_sale`)
-) 
+);
 
-CREATE TABLE `progress` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `completed_at` datetime(6) DEFAULT NULL,
-  `error_message` varchar(255) DEFAULT NULL,
-  `started_at` datetime(6) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) 
+- CREATE TABLE `progress` (
+-  `id` bigint NOT NULL AUTO_INCREMENT,
+-  `completed_at` datetime(6) DEFAULT NULL,
+-  `error_message` varchar(255) DEFAULT NULL,
+-  `started_at` datetime(6) DEFAULT NULL,
+-  `status` varchar(255) DEFAULT NULL,
+-  PRIMARY KEY (`id`)
+- ) ;
 ---
 
 ## ⚙️ Configuration
