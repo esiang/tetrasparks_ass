@@ -59,6 +59,31 @@ progress table:
 ![image-1](https://github.com/user-attachments/assets/2e645edd-0c07-4082-aa19-2c4d4d040206)
 
 
+CREATE TABLE `game` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `cost_price` decimal(38,2) DEFAULT NULL,
+  `date_of_sale` datetime(6) DEFAULT NULL,
+  `game_code` varchar(255) DEFAULT NULL,
+  `game_id` bigint DEFAULT NULL,
+  `game_name` varchar(255) DEFAULT NULL,
+  `game_no` bigint DEFAULT NULL,
+  `sale_price` decimal(38,2) DEFAULT NULL,
+  `tax` decimal(38,2) DEFAULT NULL,
+  `type` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `in_gameId` (`game_id`),
+  KEY `in_gameNo` (`game_no`),
+  KEY `in_dateOfSale` (`date_of_sale`)
+) 
+
+CREATE TABLE `progress` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `completed_at` datetime(6) DEFAULT NULL,
+  `error_message` varchar(255) DEFAULT NULL,
+  `started_at` datetime(6) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 
 ---
 
 ## ⚙️ Configuration
