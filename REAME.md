@@ -47,9 +47,11 @@ MySQL 8+
 📂 Database Structure
 
 game table:
+
 ![alt text](image.png)
 
 progress table:
+
 ![alt text](image-1.png)
 
 ⚙️ Configuration
