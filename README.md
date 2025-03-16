@@ -169,16 +169,15 @@ System.out.println("Execution time for /api/endpoint: " + executionTime + " ms")
 - Execution time helps identify potential performance bottlenecks in API processing.
 
 result for each API:
-Execution time for getGameSales: 98 ms
-Execution time for getTotalSales: 660 ms
-Execution time for /api/endpoint: 1439412 ms (23.99minutes)
+- Execution time for getGameSales: 98 ms.
+- Execution time for getTotalSales: 660 ms.
+- Execution time for /api/endpoint: 1439412 ms (23.99minutes).
 
 ---
 
 ## ⚡ Performance Considerations
 - Batch inserts to optimize MySQL writes.
-- Use `CompletableFuture` for asynchronous imports.
-- Track and log execution times using AOP or Actuator.
+- Using the prototype @Scope to create a new instance for each injection (request)
 
 ---
 
