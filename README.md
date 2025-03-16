@@ -4,6 +4,8 @@ A Spring Boot application that imports data from CSV files into a MySQL database
 
 This app doesn't require any middleware to achieve the desired outcome. However, we are using the prototype @Scope to create a new instance for each injection (request), allowing us to handle multiple imports simultaneously.
 
+All execution time calculation data is based on a 1,000,000-row CSV file, saved on Git as game_sales.7z.
+
 ---
 
 ## 🚀 Features
