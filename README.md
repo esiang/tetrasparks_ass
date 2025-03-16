@@ -1,15 +1,17 @@
-# Spring Boot CSV Import API
+# Spring Boot Game Sales and CSV Import API Assessment
 
-A Spring Boot application that imports data from CSV files into a MySQL database using OpenCSV. The API supports asynchronous processing and tracks progress using a progress service.
+A Spring Boot application that imports data from CSV files into a MySQL database using OpenCSV, and calculate, query Game Sales. The API supports tracks progress using a progress service.
+
+This app doesn't require any middleware to achieve the desired outcome. However, we are using the prototype @Scope to create a new instance for each injection (request), allowing us to handle multiple imports simultaneously.
 
 ---
 
 ## 🚀 Features
 - **CSV Import**: Import data from CSV files into the MySQL database.
-- **Asynchronous Processing**: Uses `CompletableFuture` for non-blocking imports.
 - **Progress Tracking**: Track the status of the import (IN_PROGRESS, COMPLETED, FAILED).
 - **Error Handling**: Detailed error messages for failed imports.
 - **Game Sales API**: Retrieve and analyze game sales data.
+- **Execution Time Tracking**: Logs execution times for API calls for performance insights.
 
 ---
 
@@ -152,20 +154,24 @@ curl -X GET "http://localhost:8080/api/getTotalSales?fromDate=2024-01-01T00:00:0
 
 ---
 
-## ✅ Testing
+## ⏱️ Execution Time Calculation
+Each API endpoint measures execution time using the following method:
 
-- **Run Tests**:
-```bash
-mvn test
-```
-
-- **Sample JUnit Test** (using `MockMvc`):
 ```java
-mockMvc.perform(post("/api/import")
-    .content(fileContent)
-    .contentType(MediaType.MULTIPART_FORM_DATA))
-    .andExpect(status().isOk());
+long startTime = System.currentTimeMillis();
+// Execute API logic here
+long endTime = System.currentTimeMillis();
+long executionTime = endTime - startTime;
+System.out.println("Execution time for /api/endpoint: " + executionTime + " ms");
 ```
+
+- The calculated execution time is logged to the console for performance monitoring.
+- Execution time helps identify potential performance bottlenecks in API processing.
+
+result for each API:
+Execution time for getGameSales: 98 ms
+Execution time for getTotalSales: 660 ms
+Execution time for /api/endpoint: 1439412 ms (23.99minutes)
 
 ---
 
