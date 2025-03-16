@@ -79,7 +79,7 @@ management.endpoints.web.exposure.include=*
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/esiang/tetrasparks_ass.git
-cd csv-import-api
+cd tetrasparks_ass
 ```
 
 2. **Build the Application**
