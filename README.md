@@ -168,7 +168,7 @@ System.out.println("Execution time for /api/endpoint: " + executionTime + " ms")
 - The calculated execution time is logged to the console for performance monitoring.
 - Execution time helps identify potential performance bottlenecks in API processing.
 
-result for each API:
+Result for each API:
 - Execution time for getGameSales: 98 ms.
 - Execution time for getTotalSales: 660 ms.
 - Execution time for /api/endpoint: 1439412 ms (23.99minutes).
