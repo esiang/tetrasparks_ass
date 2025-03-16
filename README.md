@@ -63,7 +63,7 @@ progress table:
 
 ### `application.properties`
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.url=jdbc:mysql://localhost:3306/gamedb?useSSL=false
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
@@ -76,7 +76,7 @@ management.endpoints.web.exposure.include=*
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/csv-import-api.git
+git clone https://github.com/esiang/tetrasparks_ass.git
 cd csv-import-api
 ```
 
